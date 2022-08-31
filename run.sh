@@ -1,0 +1,3 @@
+#!/bin/bash
+
+{ python3 main.py 2>&1 1>&3 | grep -vP "oneDNN custom operations are on|could not open file to read NUMA node|This TensorFlow binary is optimized with oneAPI Deep Neural Network Library|To enable them in other operations, rebuild TensorFlow with the appropriate compiler|Could not identify NUMA node of platform GPU id|Sampler and server are owned by the same process|Your kernel may have been built without NUMA support|TensorFloat-32 will be used for the matrix multiplication" 1>&2; } 3>&1
